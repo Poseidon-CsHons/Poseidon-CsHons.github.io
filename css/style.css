@@ -80,13 +80,13 @@ a {
 }
 
 
-.intro-message,.intro-message-experiment > h1 {
+.intro-message > h1, .intro-message-experiment > h1 {
   margin: 0;
   font-size: 5em;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
-.intro-message,.intro-message-experiment > h2 {
+.intro-message > h2, .intro-message-experiment > h2 {
   margin: 0;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
@@ -97,17 +97,18 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.intro-message,.intro-message-experiment > h3 {
+.intro-message > h3, .intro-message-experiment > h3 {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 
 @media (max-width: 767px) {
-  .intro-message,.intro-message-experiment {
+ 
+  .intro-message, .intro-message-experiment {
     padding-bottom: 15%;
   }
 
-  .intro-message > h1 {
+  .intro-message > h1, .intro-message-experiment > h1 {
     font-size: 3em;
   }
 
