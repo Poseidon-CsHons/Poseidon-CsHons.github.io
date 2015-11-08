@@ -53,6 +53,10 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
+li.dropdown-pc:hover ul.dropdown-menu {
+  display: block;
+}
+
 .lead {
   font-size: 18px;
   font-weight: 400;
