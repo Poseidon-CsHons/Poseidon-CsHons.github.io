@@ -12,6 +12,5 @@ var searchData=
   ['arerelated',['areRelated',['../class_c_neural_net.html#a2a783d324a4a0342b15e8bf180d67de8',1,'CNeuralNet']]],
   ['averagegenerationfitness',['averageGenerationFitness',['../class_c_controller.html#ab89df6cde16ffe1b86fe31e023ed90df',1,'CController']]],
   ['averagerelatedness',['averageRelatedness',['../struct_group.html#ac85aed5fafac0798d3fc23fc5184e1c2',1,'Group']]],
-  ['assessing_20the_20nested_20tug_2dof_2dwar_20model_20for_20the_20evolution_20of_20cooperation_20_2d_20jacob_20clarkson_2c_20paul_20wanjohi_2c_20zac_20melnick',['Assessing the Nested Tug-of-War model for the Evolution of Cooperation - Jacob Clarkson, Paul Wanjohi, Zac Melnick',['../index.html',1,'']]],
-  ['alsb',['ALSB',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['assessing_20the_20nested_20tug_2dof_2dwar_20model_20for_20the_20evolution_20of_20cooperation_20_2d_20jacob_20clarkson_2c_20paul_20wanjohi_2c_20zac_20melnick',['Assessing the Nested Tug-of-War model for the Evolution of Cooperation - Jacob Clarkson, Paul Wanjohi, Zac Melnick',['../index.html',1,'']]]
 ];
