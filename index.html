@@ -60,7 +60,7 @@
                     <li>
                         <a href=" https://bitbucket.org/ZMel/poseidon" target="_blank">Source Code</a>
                     </li>
-                     <li>
+                    <li>
                         <a href="documentation.html" target="_blank">Documetation</a>
                     </li>
                 </ul>
@@ -77,7 +77,6 @@
                         <h1>Poseidon</h1>
                         <h3>An Agent Based Simulation</h3>
                         <hr class="intro-divider">
-
                     </div>
                 </div>
             </div>
@@ -191,16 +190,25 @@
                         <h2>Agents</h2>
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
-                        <p class="lead">The above is evidence that the tug-of-war theory is a strong candidate for explaining the evolution of cooperation. The problem is its abstract nature.
+                        <p class="lead">
+                            The agent population consisted of multiple agents, each with a randomly generated Artificial Neural Network (ANN), by making use of a Cauchy Distribution for weight initialisation.
                             <br>
-                            <br> Many simplifications and generalizations are made in order to gain insight into the evolutionary process, but the complex behaviours of individuals and their interactions are not taken into account.
+                            <br> ANNs are based on the biology of the brain, where the interconnected nodes making up the ANN can be compared to the interconnected neurons of the brain [32]. The links between the nodes in the ANN can be thought of as synapses.
                             <br>
-                            <br> Agent Based Systems can add to this area by being used to create and test meaningful models which are still based on the principle of observation of natural systems. Agent-based systems have proven invaluable as complementary tools in many different problem domains and fields.
+                            <br> ANNs are able to provide a robust approach to approximating functions where, as shown by Cybenko [14] a fully-connected neural network with a single hidden layer is able to approximate any continuous function (Universal Function Approximator). These structures are therefore useful when simulating biological behaviour.
                             <br>
-                            <br> By incorporating complex features such as behavioural adaptation via evolution, an agent-based model is able to complement theoretical models by simulating behaviours that cannot otherwise be captured. Such a simulation would facilitate the evaluation of theories regarding the evolution of cooperation.</p>
+                            <br> The ANN held a one to one mapping [63] where the genotype consisted of a vector of floating point values which represented the ANN weights. Agents required an ANN design that was able to represent both cooperative and selfish behaviour and thus the inputs needed to be carefully chosen.
+                            <br>
+                            <br> The inputs to the ANN therefore consisted of a scaled value of both the agent’s current energy and the squared distance between the agent and its closest resource. Based on this input the agents’ ANN output value would determine how they would like to act within the environment and foraging task at hand (act selfishly or cooepratively).
+                        </p>
                     </div>
                     <div class="col-lg-5 col-sm-6">
-                        <img class="img-responsive image-spacer" src="img/antBrain.png" alt="">
+                        <div class="row">
+                            <img class="img-responsive image-spacer" src="img/agentANN.png" alt="">
+                            <figcaption style="text-align: center;">Fig1. - Architecture of the agent controller defined by a fully connected multi-layer neural network</figcaption>
+                            <img class="img-responsive image-spacer" src="img/antBrain.png" alt="">
+                            <figcaption style="text-align: center;">Fig2. - Representation of Agent and Agent brain.</figcaption>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,9 +219,9 @@
                     <div class="clearfix"></div>
                     <h2>Controller Design</h2>
                     <p class="lead">
-                        By making use of a combination of both AI and Machine Learning techniques, it is possible to create agent controllers. The controller is responsible for actions of the agents, and must perform well for a given task. Although it is possible for these controllers to be designed by hand, there is no guarantee that they will lead to performant behaviour in agents.
+                        Automated controller design [18, 55] is a process used to create novel agent controllers without the need for human interaction. Controllers are responsible for the actions of agents within an environment, and must be designed to be able to perform as best as possible for the task at hand (for example, resource foraging, reproduction, collaborative box pushing).
                         <br>
-                        <br>Neuro-Evolution in particular has been suggested as effective methods to create agent controllers in ABS [Baldassarre et al. 2003][Nolfi and Floreano 2000].
+                        <br> Although it is possible for these to be designed by hand (known as heuristic controllers), these are limited as they cannot anticipate all possible situations in complex environments.
                     </p>
                 </div>
             </div>
@@ -226,12 +234,15 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            Artificial Neural Networks (ANNs) (Palm, 1986) form an integral part of the NE process. ANNs are based on the biology of the brain, where the interconnected nodes making up the ANN can be compared to the interconnected neurons of the brain (Mitchell, 1997). The links between the nodes in the ANN can be thought of as synapses.
+                            Neuro-Evolution (NE) [31] is the adaptation of Artificial Neural Networks (ANNs) using Evolutionary Algorithms (EAs) and follows the process as detailed by figure 3. NE is used to adapt the weights of an ANN until an optimal configuration is found.
                             <br>
-                            <br> Neuro-Evolution (NE) [Miikkulainen 2010] is the application of Evolutionary Algorithms (EAs) to Artificial Neural Networks (ANNs). The EA searches for specific network configurations within a set of candidate solutions. NE is used to modify multiple aspects of ANNs, such as weights and topologies within the ANN, which gradually allows an agent controlled by the ANN to learn.
+                            <br> It does so by using an EA to search for specific network configurations within a set of candidate solutions by crossing over and mutating agent ANNs, finally producing adapted offspring. The weights control an agent’s behaviour [41], and therefore as these weights are adapted the agent’s behaviour is refined.
+                            <br>
+                            <br> This process results in the autonomous creation and evolution of agent controllers. Due to the use of the EAs, NE is helpful to use in situations where we do not know correct training examples and acts as a form of unsupervised learning.
                     </div>
                     <div class="col-lg-5 col-sm-6">
-                        <img class="img-responsive image-spacer" src="img/antBrain.png" alt="">
+                        <img class="img-responsive image-spacer" src="img/neuroEvolution.png" alt="">
+                        <figcaption style="text-align: center;">Fig3. - Neuro-Evolution (NE) Process.</figcaption>
                     </div>
                 </div>
             </div>
@@ -242,9 +253,15 @@
                     <div class="clearfix"></div>
                     <h2>Experimentation</h2>
                     <p class="lead">
-                        The core problem that we need to solve is how to adequately capture the tug-of-war model in our agent-based implementation. The same experiments that were carried out mathematically by Reeve and Holldobler must be able to be carried out empirically in our simulation.
-                        <br>
-                        <br> These experiments will be split into 3 distinct sections
+                        The Nested Tug-of-War model by Reeve and Holldobler, predicts the emergence of three key organizational trends that are observed in cooperative societies in the biological world.
+                    </p>
+                    <p class="lead3">
+                        Within-group cooperation increases as the level of genetic relatedness between group members increases.
+                        <br> Within-group cooperation increases as group size increases.
+                        <br> Within-group cooperation increases as between-group competition increases.
+                    </p>
+                    <p class="lead">
+                        Our objective was to use an Agent-Based System to find evidence for the predictions of the Nested Tug-of-War model. To achieve this, three studies were conducted, each aiming to assess the model according to one of the trends mentioned above.
                     </p>
                 </div>
             </div>
@@ -257,11 +274,11 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            It is mentioned by Reeve and H¨olldobler [2007] that the highest levels of altruism are found amongst closely related groups. Their game theoretic model predicted that relatedness is found before the occurrence of intra-group cooperation.
+                            This study investigated the origins of cooperation by analysing the effects of individual relatedness and patch richness on the levels of cooepration observed. As a secondary measure, other factors leading to the evolution of cooperation were explored.
                             <br>
-                            <br> The purpose of this section of the experimentation to test if an increase in genetic relatedness between agents causes an increase in between agent cooperation and the rise of super-organisms
+                            <br> A range of relatedness values were tested in four different environments with varying resource distributions. The results showed a positive relationship between agent relatedness and the level of cooperation experienced.
                             <br>
-                            <br> The simulation will be initialized with a single population of agents, where multiple new species of agents will be dynmically created based on agent recombination and the genetic relatedness level between these agents.
+                            <br> The study was therefore able to agree with the trend mentioned in the Nested Tug-of-War model, indicating that higher levels of agents realtedness lead to higher levels of within-grou pcooepration. The results further indicated that other factors, for example, Patch Richness (environmental competition), were also found to affect the levels of cooperation found.
                     </div>
                     <div class="col-lg-5 col-sm-6">
                         <img class="img-responsive image-spacer" src="img/dna.png" alt="">
@@ -280,11 +297,11 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            By changing group size, Reeve and H¨olldobler [2007] found that the above correlations emerged elegantly from their model.
+                            The Nested Tug-of-War model predicts higher within and between group cooperation levels in large groups when compared to small groups of agents. Artificial Life (AL) experiments are conducted to test the null hypothesis: <em>Group size effects the level of cooperation of a group</em>
                             <br>
-                            <br>To measure the effect of group size on evolution, the experimenter will be able to stipulate the global starting population, this will consist of two different agent populations of a default starting size and the reproductive capacity of agents (how fast a group is able to grow in size).
+                            <br> The AL experiments conducted used 2 groups where on of the groups starting size if fixed to 2000 and the other had a varying size of 200, 400, 600, 800 and 1000 agents.
                             <br>
-                            <br>The size of the group will therefore be dynamically changed during the simulation run.
+                            <br> The level of cooperation in this study was defined by a fitness function. The results of the experiment demonstrated that the starting size of a group, and hence its group size, has an effect on the level of cooperation, in particular, the levels of between group cooperation. An example of the groups fitness is illustrated below.
                         </p>
                     </div>
                 </div>
@@ -298,9 +315,12 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            By changing the levels of inter-group competition, Reeve and H¨olldobler [2007] found that the above correlations emerged elegantly from their model. To simulate this situation the levels of resource density will be altered during run which will bring a rise in inter-group cooperation among the agents.
+                            Competition was facilitated by resource patchiness. Five difference environments were created with different resource distributions.
                             <br>
-                            <br>Inter-group competition will be facilitated by environmental factors such as resource availability and patchiness. One small resource patch in the world will lead to high competition, as all groups will have to fight for the limited resources. The more intragroup cooperation occurs, the higher the pool of collected resources for a group will be at the end of each iteration.
+                            <br> The simulation was run 250 times up until 200 generations on each of the resource environments. The level of cooperation that evolved was recorded.
+                            <br>
+                            <br> Results from the experiments show that there was a statistically significant effect of between-group competition on within-group cooperation.
+                            <br> Increase between-group competition led to increased within-group cooperation, but only up to a point. Increasing the level of competition between groups beyond this point produced the opposite effect.
                     </div>
                     <div class="col-lg-5 col-sm-6">
                         <img class="img-responsive image-spacer" src="img/food.png" alt="">
@@ -314,8 +334,13 @@
                     <div class="clearfix"></div>
                     <h2>Results</h2>
                     <p class="lead">
-                        By tracking the energy amount of resources held by a group at the end of each iteration, we will be able to measure the amount of cooperation that occurred.
+                        Descriptive results and statistics of the above studies can be found at the following locations:
                     </p>
+                    <div class="centered">
+                        <a href="relatedness.html#results" target="_blank" class="btn btn-default btn-lg" type="button">Relatedness</a>
+                        <a href="groupSize.html#results" target="_blank" class="btn btn-default btn-lg" type="button">Group Size</a>
+                        <a href="competition.html#results" target="_blank" class="btn btn-default btn-lg" type="button">Competition</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -384,7 +409,6 @@
                         <br> - Experiment specific statistical analysis
                         <br> - Code cleanup
                         <br> - Documentation
-
                     </p>
                     <h3>Paul</h3>
                     <p class="lead2">
