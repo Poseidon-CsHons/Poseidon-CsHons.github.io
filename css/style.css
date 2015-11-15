@@ -76,6 +76,7 @@ li.dropdown-pc:hover ul.dropdown-menu {
 .lead3 {
     font-size: 20px;
     font-weight: 400;
+    text-align: center;
 }
 
 .intro-header {
@@ -210,6 +211,11 @@ li.dropdown-pc:hover ul.dropdown-menu {
 .content-section-d > .container > .row > .lead2 {
     font-size: 25px;
     font-weight: 300;
+}
+
+.content-section-d > .container > .row > .lead3 {
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .content-section-d > .container > .row > h2 {
