@@ -90,17 +90,16 @@
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Introduction</h2>
                 <p class="lead">
-                    Cooperative behavior can be found in many insect societies, and is advantages to the long term survival of a species.
+                    Cooperative behaviour can be found in many insect societies, and is advantages to the long term survival of a species.
                     <br>
-                    <br> Observations of cooperative societies by Reeve and Holldobler [1], have revealed several organizational trends relating to the increase in cooperation between members of certain species. These trends have provided insight into the origins of cooperation and from these observations the game-theoretical Nested Tug-of-War model was developed.
-                </p>
+                    <br> Observations of cooperative societies by have revealed several organizational trends relating to the increase in cooperation between members of certain species [1]. These trends have provided insight into the origins of cooperation, and informed the design of the Nested Tug-of-War model.               </p>
                 <p class="lead3">
                     <br> (i) Cooperation is more likely to occur between agents which are genetically related.
                     <br>(ii) Large colony sizes lead to higher levels of cooperation.
                     <br>(iii) Inter-group competition is strongly associated with intra-group cooperation.
                 </p>
                 <p class="lead">
-                    <br> Our objective was to simulate biological species in order to test the above three of the organizational trends put forward by the model. In order to do this, an Agent-Based simulation was constructed which would facilitate three separate experiments, the aim of each being to evaluate a single aspect of the model. Together, our results serve as an assessment of the model as a whole and provided insight into the possible origins of cooperation in biological societies
+                    <br> Our objective was to simulate a biological species in order to test that the above three organizational trends emerge in the Nested Tug-of-War model, as claimed by its authors. In order to do this, an Agent-Based simulation was constructed which facilitated three separate experiments, the aim of each being to evaluate a single aspect of the model. Together, our results serve as an assessment of the model as a whole and provided insight into the possible origins of cooperation in biological societies.
                 </p>
             </div>
         </div>
@@ -189,13 +188,13 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            The agent population consisted of multiple agents, each with a randomly generated Artificial Neural Network (ANN), by making use of a Cauchy Distribution for weight initialization.
+                            The agent population consisted of multiple agents, each with a randomly generated Artificial Neural Network (ANN), making use of a Cauchy Distribution for weight initialization.
                             <br>
                             <br> ANNs are based on the biology of the brain, where the interconnected nodes making up the ANN can be compared to the interconnected neurons of the brain [4]. The links between the nodes in the ANN can be thought of as synapses.
                             <br>
-                            <br> ANNs are able to provide a robust approach to approximating functions where, as shown by Cybenko [5] a fully-connected neural network with a single hidden layer is able to approximate any continuous function (Universal Function Approximator). These structures are therefore useful when simulating biological behavior.
+                            <br> ANNs are able to provide a robust approach to approximating functions where, as shown by Cybenko [5] a fully-connected neural network with a single hidden layer is able to approximate any continuous function (Universal Function Approximator). These structures are therefore useful when simulating biological behaviour.
                             <br>
-                            <br> The ANN held a one to one mapping [6] where the genotype consisted of a vector of floating point values which represented the ANN weights. Agents required an ANN design that was able to represent both cooperative and selfish behavior and thus the inputs needed to be carefully chosen.
+                            <br> The ANN held a one to one mapping [6] where the genotype consisted of a vector of floating point values which represented the ANN weights. Agents required an ANN design that was able to represent both cooperative and selfish behaviour and thus the inputs needed to be carefully chosen.
                             <br>
                             <br> The inputs to the ANN therefore consisted of a scaled value of both the agent's current energy and the squared distance between the agent and its closest resource. Based on this input the agent's ANN output value would determine how they would like to act within the environment and foraging task at hand (act selfishly or cooperatively).
                         </p>
@@ -232,9 +231,9 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            Neuro-Evolution (NE) [9] is the adaptation of Artificial Neural Networks (ANNs) using Evolutionary Algorithms (EAs) and follows the process as detailed by figure 3. NE is used to adapt the weights of an ANN until an optimal configuration is found.
+                            Neuro-Evolution (NE) [9] is the adaptation of Artificial Neural Networks (ANNs) using Evolutionary Algorithms (EAs) and follows the process as detailed by Fig 3. NE is used to adapt the weights of an ANN until an optimal configuration is found.
                             <br>
-                            <br> It does so by using an EA to search for specific network configurations within a set of candidate solutions by crossing over and mutating agent ANNs, finally producing adapted offspring. The weights control an agent’s behavior [10], and therefore as these weights are adapted the agent’s behavior is refined.
+                            <br> It does so by using an EA to search for specific network configurations within a set of candidate solutions by crossing over and mutating agent ANNs, finally producing adapted offspring. The weights control an agent’s behaviour [10], and therefore as these weights are adapted the agent’s behaviour is refined.
                             <br>
                             <br> This process results in the autonomous creation and evolution of agent controllers. Due to the use of the EAs, NE is helpful to use in situations where we do not know correct training examples and acts as a form of unsupervised learning.
                     </div>
@@ -272,7 +271,7 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            This study investigated the origins of cooperation by analyzing the effects of individual relatedness and patch richness on the levels of cooperation observed. As a secondary measure, other factors leading to the evolution of cooperation were explored.
+                            This study investigated the origins of cooperation by analysing the effects of individual relatedness and patch richness on the levels of cooperation observed. As a secondary measure, other factors leading to the evolution of cooperation were explored.
                             <br>
                             <br> A range of relatedness values were tested in four different environments with varying resource distributions. The results showed a positive relationship between agent relatedness and the level of cooperation experienced.
                             <br>
@@ -318,7 +317,8 @@
                             <br> The simulation was run 250 times up until 200 generations on each of the resource environments. The level of cooperation that evolved was recorded.
                             <br>
                             <br> Results from the experiments show that there was a statistically significant effect of between-group competition on within-group cooperation.
-                            <br> Increase between-group competition led to increased within-group cooperation, but only up to a point. Increasing the level of competition between groups beyond this point produced the opposite effect.
+                            <br> 
+                            <br> Increasing between-group competition led to increased within-group cooperation, but only up to a point. Increasing the level of competition between groups beyond this point produced the opposite effect.
                     </div>
                     <div class="col-lg-5 col-sm-6">
                         <img class="img-responsive image-spacer" src="img/food.png" alt="">
