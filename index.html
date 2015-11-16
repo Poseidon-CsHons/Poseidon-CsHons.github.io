@@ -90,7 +90,7 @@
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Introduction</h2>
                 <p class="lead">
-                    Cooperative behaviour can be found in many insect societies, and is advantages to the long term survival of a species.
+                    Cooperative behaviour can be found in many insect societies, and is advantageous to the long term survival of a species.
                     <br>
                     <br> Observations of cooperative societies by have revealed several organizational trends relating to the increase in cooperation between members of certain species [1]. These trends have provided insight into the origins of cooperation, and informed the design of the Nested Tug-of-War model.               </p>
                 <p class="lead3">
@@ -122,35 +122,33 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-sm-6">
-                        <h2>Cooperative Behaviour</h2>
+                        <h2>Cooperation and the Nested Tug-of-War</h2>
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            How eusociality (and cooperation in particular) may have evolved is a question of great interest and importance in the field of biology. Several theories, such as kin selection [Hamilton 1963], reciprocal altruism [Trivers 1971], and tug-of-war theory [Reeve and Hölldobler 2007] attempt to predict the evolution of cooperative behaviour.
+                            How eusociality (and cooperation in general) may have evolved is a question of great interest in the field of biology. Classical Darwinism, which acts on a purely individual and competitive basis, does not seem able to properly account for cooperative and altruistic behaviour to the degree which it is observed. Several theories, such as kin selection [Hamilton 1963], reciprocal altruism [Trivers 1971], and tug-of-war theory [Reeve and Hölldobler 2007] offer alternative explanations, or augmentations to classical Darwinism, in order to understand how cooperation may have evolved.
                             <br>
-                            <br>This research will focus primarily on Tug-of-War Theory: specifically, the model proposed by Reeve and Hölldobler [2007].
+                            <br>This research will focus primarily on the Nested Tug-of-War Theory [Reeve and Hölldobler 2007].
                             <br>
-                            <br>Their model suggests that cooperative behaviour emerges as a bi-product of a nested tug-of-war. Agents within the same group compete for resources gathered by their group, and groups compete with each other for the limited resources available in the environment.
+                            <br>Their model suggests that cooperative behaviour emerges as a bi-product of a particular organizational structure. This structure, analogous to a "nested tug-of-war", sees intragroup competition take place within the larger context of intergroup competition, as illustrated in the diagram below. Agents within the same group compete for resources gathered by their group, and groups compete with each other for the limited resources available in the environment.
                         </p>
                         <img class="img-responsive" src="img/group.png" alt="">
+                        <figcaption>Fig 1. - Diagrammatic representation of the Nested Tug-of-War Structure</figcaption>
                     </div>
                     <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                         <hr class="section-heading-spacer3">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            All agents in this model have the capacity for selfishness. They may choose to not expend any energy foraging for resources, knowing that they will get a share of what is collected by other agents in their group. This situation describes intragroup competition.
+                            In the Nested Tug-of-War model, all agents have the capacity for selfishness. At any point in time, they may choose to expend their energy by foraging for resources that will later be shared with the group. In this scenario, the agent is cooperating.
                             <br>
-                            <br>Conversely, an agent may choose to expend its own limited energy searching for resources that will be shared amongst its group. This situation implicitly defines intragroup cooperation [Reeve and Hölldobler 2007]. In the real world, superorganisms exhibit the following key organizational trends [Wilson and Hölldobler 2005].
                             <br>
-                            <br>(1) Cooperation is more likely to occur between agents with similar genetics.
+                            Alternatively, an agent may choose to remain motionless, conserving its own energy, knowing that it will receive its share of the resources that other agents collect. In this situation, the agent is competing within its own group.
                             <br>
-                            <br>(2) Large colony sizes lead to higher levels of cooperation.
                             <br>
-                            <br>(3) As colony size increases, brood output decreases.
+                            Despite the fact that it is better for an agent to be selfish, environmental factors such as genetic relatedness between agents in a group, the number of individuals in a group, as well as the level of inter-group competition, are all expected to play a role in the proportion of cooperative agents that a group evolves over time.
                             <br>
-                            <br>(4) Resource patchiness and inter-group competition are strongly associated with cooperation.
                             <br>
-                            <br>By changing group size, levels of inter-group competition and genetic relatedness Reeve and Hölldobler [2007] found that the above correlations emerged elegantly from their model.
+                            We will now discuss the Agents and other components in our Agent-Based system, before introducing the experimental strategies we employed in order to evaluate claims regarding the validity of the Nested Tug-of-War model.
                         </p>
                     </div>
                 </div>
@@ -189,9 +187,9 @@
                     <div class="col-lg-5 col-sm-6">
                         <div class="row">
                             <img class="img-responsive image-spacer" src="img/agentANN.png" alt="">
-                            <figcaption style="text-align: center;">Fig 1. - Architecture of the agent controller defined by a fully connected multi-layer neural network</figcaption>
+                            <figcaption style="text-align: center;">Fig 2. - Architecture of the agent controller defined by a fully connected multi-layer neural network</figcaption>
                             <img class="img-responsive image-spacer" src="img/antBrain.png" alt="">
-                            <figcaption style="text-align: center;">Fig 2. - Representation of Agent and Agent brain.</figcaption>
+                            <figcaption style="text-align: center;">Fig 3. - Representation of Agent and Agent brain.</figcaption>
                         </div>
                     </div>
                 </div>
@@ -218,7 +216,7 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
-                            Neuro-Evolution (NE) [9] is the adaptation of Artificial Neural Networks (ANNs) using Evolutionary Algorithms (EAs) and follows the process as detailed by Fig 3. NE is used to adapt the weights of an ANN until an optimal configuration is found.
+                            Neuro-Evolution (NE) [9] is the adaptation of Artificial Neural Networks (ANNs) using Evolutionary Algorithms (EAs) and follows the process as detailed by Fig 4. NE is used to adapt the weights of an ANN until an optimal configuration is found.
                             <br>
                             <br> It does so by using an EA to search for specific network configurations within a set of candidate solutions by crossing over and mutating agent ANNs, finally producing adapted offspring. The weights control an agent’s behaviour [10], and therefore as these weights are adapted the agent’s behaviour is refined.
                             <br>
@@ -226,7 +224,7 @@
                     </div>
                     <div class="col-lg-5 col-sm-6">
                         <img class="img-responsive image-spacer" src="img/neuroEvolution.png" alt="">
-                        <figcaption style="text-align: center;">Fig 3. - Neuro-Evolution (NE) Process.</figcaption>
+                        <figcaption style="text-align: center;">Fig 4. - Neuro-Evolution (NE) Process.</figcaption>
                     </div>
                 </div>
             </div>
@@ -295,7 +293,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 col-sm-6">
-                        <h2>Resource Density</h2>
+                        <h2>Between-Group Competition</h2>
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <p class="lead">
@@ -308,7 +306,7 @@
                             <br> Increasing between-group competition led to increased within-group cooperation, but only up to a point. Increasing the level of competition between groups beyond this point produced the opposite effect.
                     </div>
                     <div class="col-lg-5 col-sm-6">
-                        <img class="img-responsive image-spacer" src="img/food.png" alt="">
+                        <img class="img-responsive image-spacer" src="img/Competition/env1.png" alt="">
                     </div>
                 </div>
             </div>
