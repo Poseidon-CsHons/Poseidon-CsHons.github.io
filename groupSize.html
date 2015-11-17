@@ -46,9 +46,6 @@
                         <a href="#results">Results</a>
                     </li>
                     <li>
-                        <a href="#breakdown">Work Breakdown</a>
-                    </li>
-                    <li>
                         <a href="#conclusion">Conclusion</a>
                     </li>
                 </ul>
@@ -119,14 +116,14 @@
                     The primary objective is to determine if larger groups of 
                     autonomous agents have higher levels of cooperations than
                     small groups of agents. The null hypothesis and alternate 
-                    hypothesis (<em>H0</em> and <em>H1</em> respectively) are stated below:
+                    hypothesis (<em>H<sub>0</sub></em> and <em>H<sub>1</sub></em> respectively) are stated below:
                     <br>
                     <br>
-                    <em>H0: Group size has a positive effect on levels of
+                    <em>H<sub>0</sub>: Group size has a positive effect on levels of
                         cooperations of a group.
                     </em>
                     <br>
-                    <em>H1: Group size has no effect on levels of
+                    <em>H<sub>1</sub>: Group size has no effect on levels of
                         cooperations of a group.
                     </em>
                 </p>
@@ -135,7 +132,7 @@
     </div>
     <div id="experimentdesign" class="content-section-d">
         <div class="container">
-            <h2>Experiment design</h2>
+            <h2>Experiment Design</h2>
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
         <div class="row">
@@ -245,14 +242,25 @@
                 </table>
             </div>
             <div class="col-lg-4" style="margin-left: 100px">
+                <h3>Experiment Description</h3>
+                <p class="lead">
+                    The study conducted 5 experiments with different initial group sizes.
+                    These experiments tested a group with 2000 initial number of agents against
+                    a group with 200 initial number of agents. The four experiments that were conducted
+                    fixed the group with 2000 initial number of agents and varied the group with 200 initial 
+                    number of agents to 400, 600, 800 and 1000 for the four experiments respectively.
+                    <br>
+                    <br>
+                    Data was collected from the simulation and processed to provide the average fitness of the groups
+                    across all generations for all the 5 experiments described.
+                </p>
+                <br>
                 <h3>Simulation Parameters</h3>
                 <p class="lead">
                     On the table illustrated on the left are the parameters used in the experiment. 
-                    The table illustrates the parameter values for the generation genetic algorithm,
+                    The table contains the parameter values for the generation genetic algorithm,
                     environment and experiment-specific parameters. 
-
                     <br>
-                    
                 </p>
             </div>
         </div>
@@ -260,145 +268,63 @@
     </div>
     <div id="results" class="content-section-a">
         <div class="container">
-            <h2>Graphs Depicting Behavior of Simulation Under 3 Environments Through all Relatedness Threshold Values</h2>
+            <h2>Results</h2>
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <div class="row">
-                <div class="col-lg-6 col-sm-6">
-                    <img class="img-responsive" src="img/Relatedness/withinGroup_graph.png" alt="">
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <img class="img-responsive" src="img/Relatedness/betweenGroup_graph.png" alt="">
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <img class="img-responsive" src="img/Relatedness/groupDiversity_graph.png" alt="">
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <img class="img-responsive" src="img/Relatedness/populationDiversity_graph.png" alt="">
+                <div class="col-lg-12 col-sm-12">
+                    <img class="img-responsive" src="img/groupsize/group_fitness.png" alt="">
+                    <figcaption style="text-align:center;">Figure 1: Graph Depicting the Fitness Values of the Groups for all Experiments</figcaption>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="content-section-b">
-        <div class="container">
             <div class="row">
-                <h2>Results</h2>
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h3>Summarized Data From Tests on Relatedness<h3>
+                <br>
                 <p class="lead">
-                    The following tables depict a positive relationship between the relatedness threshold value and the level of within-group cooperation experienced. From these tables it is also possible to compare the results across environments in order to determine how much the environmental configuration affects cooperation.
-                    <br>
-                    <br> The correlations depicted below were used to comment on factors which possibly lead to the increase of within-group cooperation. The correlations are between within-group cooperation and (i) group size (Correlation 1), (ii) number of competing groups (Correlation 2), (iii) group-diversity, (Correlation 3) and (iv) population-diversity (Correlation 4).
-                    <br>
-                    <br> Finally stable ranges depicted were specific cases in each environment where the values obtained from one RT value were not significantly different from the previous
+                    <div class="col-lg-6">
+                        Figure 1 above shows the average fitness values for the 
+                        all the 5 experiments over the 1000 generations. It 
+                        depicts the evolution of cooperation between group of 
+                        different initial sizes. 
+                    </div>
+                    <div class="col-lg-6">
+                        The results demonstrated in the Figure above was 
+                        statistically analysed to test for any significant 
+                        differences among the recorded group fitness values.
+                        This analysis demonstrated statistical significance when comparing the fitness values of both groups. 
+                    </div>
+        
                 </p>
-            </div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/env1_table.png" alt="">
-            </div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/env2_table.png" alt="">
-            </div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/env3_table.png" alt="">
-            </div>
-                        <h3>Summarized Data From Tests on Patch Richness<h3>
-            <div class="row">
-                <p class="lead">
-                    It was found that the level of patch richness plays a significant effect on within-group cooperation. It was also found that this will only occur if there is sufficient competition in the base environment for the change in richness to have an effect on the cooperation found.
-                </p>
-                <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="img/Relatedness/patchRichnessResult.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="content-section-c">
-        <div class="container">
-            <h2>Sumplimentary Tables depicting the results of the Kolmogorov-Smirnov (KS-test) between environments 3 and 4, with the relatedness threshold value kept constant at 0.5</h2>
-            <div class="clearfix"></div>
-            <div class="row">
-                <img style="margin-left: auto; margin-right: auto;" class="img-responsive" src="img/Relatedness/env3vs4_table.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="content-section-b">
-        <div class="container">
-            <h2>Sumplimentary Tables depicting statistical results from Kolmogorov-Smirnov (KS-test) tests completed</h2>
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/ksTestEnv1_table.png" alt="">
-            </div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/ksTestEnv2_table.png" alt="">
-            </div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/ksTestEnv3_table.png" alt="">
-            </div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/ksTest_env1vsenv2_table.png" alt="">
-            </div>
-            <div class="row">
-                <img class="img-responsive" src="img/Relatedness/ksTest_env1vsenv3_table.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div id="breakdown" class="content-section-e">
-        <div class="container">
-            <div class="row">
-                <h2>Development Work Done</h2>
-                <div class="clearfix"></div>
-                <p class="lead2">
-                    <br> - Adaptation of smart sweepers framework to introduce resources, agents, groups, EA and NE
-                    <br> - Creation of basic ANN
-                    <br> - Introduced death functionality for both groups (and group colour representation) and agents
-                    <br> - Adaption of ANN to improve input and output functionality
-                    <br> - ANN input scaling (to allow agents not to move and be selfish if they cannot see a resource)
-                    <br> - Addition of agent field of view defining how far they can see
-                    <br> - Snapshot functionality allowing snapshots of system at any point and to restart the system from a snapshot
-                    <br> - Initial EA crossover, mutate and group methods algorithm allowing basic evolution of agents
-                    <br> - Finalization of EA algorithm for relatedness based experiments
-                    <br> - KdNode implementation to allow fast Log N resource location by agents
-                    <br> - Experiment specific statistic analysis
-                    <br> - Compare agents based on hamming distance based relatedness function
-                    <br> - Calculation of both group and population diversity based on agent relatedness
-                    <br> - Setup of website framework
-                    <br> - Website CSS and HTML design
-                </p>
-                <div class="centered">
-                    <a href="https://bitbucket.org/ZMel/poseidon" target="_blank" class="btn btn-default btn-lg" type="button">Framework</a>
-                    <a href="documentation.html" target="_blank" class="btn btn-default btn-lg" type="button">Framework Documentation</a>
-                </div>
             </div>
         </div>
     </div>
     <div id="conclusion" class="content-section-b">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-sm-6">
-                    <h2>Conclusions</h2>
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <p class="lead">
-                        This study supports the effectiveness of agent-based models as complementary tools to mathematical models formulated about biological processes and using this information we were able to develop an ABS.
-                        <br>
-                        <br> The simulation allowed us to replicate the evolutionary and adaptive processes of nature, while observing the impact of changing key parameters (such as genetic relatedness and patch richness), which cannot be done in real-world biological experiments.
-                        <br>
-                        <br> The results from this simulation agree with the first organizational trend presented by Reeve and Holldobler and the first hypothesis of this study. Therefore genetic relatedness has a strong effect on the degree of cooperation experienced contrary to the belief of studies by Nowak <em>et al</em> and Wilson.
-                        <br>
-                        <br> In a similar vein to the results obtained by Reeve and Holldobler, this simulation did not prove that relatedness is the only necessity for the occurrence within-group cooperation. Other factors, such as Patch Richness and environmental competition, were also found to play an effect.
-                        <br>
-                        <br> A possible avenue of future work would firstly include a repetition of this study on more environments in order to compare the strength that both relatedness and patch richness have on the cooperation values obtained.
-                        <br>
-                        <br> Another addition may include different configurations of starting agents (number of agents, number of groups and so on), to determine if the evolution of the system was solely a consequence of the experimental measures or rather as a direct consequence of the configuration of starting agents in the environment.
-                    </p>
-                </div>
-                <div class="col-lg-5 col-sm-4">
-                    <img class="img-responsive" src="img/antBrain.png" alt="">
-                </div>
-                <div class="col-lg-5 col-sm-4">
-                    <img class="img-responsive image-spacer" src="img/dna.png" alt="">
-                </div>
+                <h2>Conclusions</h2>
+            </div>
+            <div class="row">
+                <br>
+                <p class="lead">
+                    <div class="col-lg-6">
+                        The experiment results demonstrated that the group of 
+                        400 starting size exhibits a significant difference in 
+                        fitness levels when compared to a group of 2000
+                        starting size. Assumptions made in the experiment were 
+                        biologically inspired and were used to tackle the 
+                        design challenges experienced in the experiment.
+                    </div>
+                    <div class="col-lg-6">
+                        Observations from the experiment demonstrated the 
+                        existence of temporary spatial groups of agents that 
+                        follow each other providing a natural way of grouping
+                        agents. Ultimately, the experiment demonstrated that 
+                        there is evidence to suggest that group size has an 
+                        effect on the levels of cooperation of the group
+                        and thus we cannot reject the null hypothesis
+                        (<em>H<sub>0</sub></em>). 
+                    </div>
+        
+                </p>
             </div>
         </div>
     </div>
